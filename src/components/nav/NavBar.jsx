@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavLink from "./NavLink";
-import Logo from "../assets/dragon-warriors-logo";
+import Logo from "../../assets/dragon-warriors-logo";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -28,8 +28,8 @@ const NavBar = () => {
   return (
     <nav
       className={
-        "bg-black text-gold fixed top-0 left-0 w-screen py-4 px-10 flex items-center justify-between transition-all z-10 " +
-        (transparent && !open ? "bg-transparent" : "")
+        " text-gold fixed top-0 left-0 w-screen py-4 px-10 flex items-center justify-between transition-all z-10 " +
+        (transparent && !open ? "bg-transparent" : "bg-black")
       }
       style={{
         transform: hidden ? "translateY(-100%)" : "",

@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ButtonLink = ({ children, ...props }) => {
+const ButtonLink = ({ children, className, ...props }) => {
   return (
     <Link
-      className="border-gold border-solid border-2 py-3 w-64 font-medium text-center"
+      className={
+        "border-gold border-solid border-2 py-3 font-medium text-center inline-block " +
+        className
+      }
       {...props}
     >
       {children}

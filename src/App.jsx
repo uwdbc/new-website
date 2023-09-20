@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout.jsx";
+import RootBoundary from "./layouts/RootBoundary.jsx";
 
 const pages = import.meta.glob("./pages/**/*.jsx", { eager: true });
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       element: <Element />,
       ...(ErrorBoundary && { errorElement: <ErrorBoundary /> }),
     })),
+    errorElement: <RootBoundary />,
   },
 ]);
 

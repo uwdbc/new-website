@@ -2,12 +2,10 @@
 export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
-    colors: {
-      gold: "#ffd100",
-      black: "#000000",
-      white: "#ffffff",
-      transparent: "rgba(0, 0, 0, 0)",
+    extend: {
+      colors: {
+        gold: "#ffd100",
+      },
     },
     fontFamily: {
       sans: [
