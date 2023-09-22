@@ -1,17 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ButtonLink = ({ children, className, ...props }) => {
+const ButtonLink = ({ children, className, to, href, ...props }) => {
   return (
-    <Link
-      className={
-        "border-gold border-solid border-2 py-3 font-medium text-center inline-block " +
-        className
-      }
-      {...props}
-    >
-      {children}
-    </Link>
+    <>
+      {to ? (
+        <Link
+          className={
+            className +
+            " border-gold border-solid border-2 py-3 font-medium text-center inline-block"
+          }
+          {...props}
+        >
+          {children}
+        </Link>
+      ) : (
+        <a
+          href={href}
+          className={
+            className +
+            " border-gold border-solid border-2 py-3 font-medium text-center inline-block"
+          }
+        >
+          {children}
+        </a>
+      )}
+    </>
   );
 };
 
