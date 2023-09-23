@@ -4,6 +4,12 @@ import Logo from "../../assets/dragon-warriors-logo";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const navLinks = [
+  { name: "Home", to: "/" },
+  { name: "Join", to: "/join" },
+  { name: "Gallery", to: "/gallery" },
+];
+
 const NavBar = () => {
   const [hidden, setHidden] = useState(false);
   const [transparent, setTransparent] = useState(true);
@@ -40,18 +46,17 @@ const NavBar = () => {
       </NavLink>
       <div
         className={
-          "gap-6 md:flex " +
+          "gap-6 md:flex top-full" +
           (open
             ? "flex flex-col absolute top-0 left-0 w-full h-screen bg-black items-center"
             : "hidden")
         }
-        style={{
-          top: "100%",
-        }}
       >
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/gallery">Gallery</NavLink>
+        {navLinks.map((link, index) => (
+          <NavLink to={link.to} key={"navbar-" + index}>
+            {link.name}
+          </NavLink>
+        ))}
       </div>
       <button className="text-xl md:hidden" onClick={() => setOpen(!open)}>
         <FontAwesomeIcon icon={open ? faXmark : faBars} />

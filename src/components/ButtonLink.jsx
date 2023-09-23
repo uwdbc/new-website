@@ -7,9 +7,10 @@ const ButtonLink = ({ children, className, to, href, ...props }) => {
       {to ? (
         <Link
           className={
-            className +
-            " border-gold border-solid border-2 py-3 font-medium text-center inline-block"
+            "border-gold border-solid border-2 font-medium text-center " +
+            className
           }
+          to={to}
           {...props}
         >
           {children}
@@ -18,8 +19,8 @@ const ButtonLink = ({ children, className, to, href, ...props }) => {
         <a
           href={href}
           className={
-            className +
-            " border-gold border-solid border-2 py-3 font-medium text-center inline-block"
+            "border-gold border-solid border-2 font-medium text-center " +
+            className
           }
         >
           {children}
