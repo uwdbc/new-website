@@ -86,7 +86,7 @@ const index = () => {
       </section>
 
       {/* history section */}
-      <section className="py-16 bg-dark text-gold">
+      <section ref={contentRef} className="py-16 bg-dark text-gold">
         <div className="container mx-auto px-4">
           <div>
             <h3 className="text-sm md:text-xl font-semibold text-center text-white pb-2">
@@ -101,6 +101,7 @@ const index = () => {
           </div>
           <div className="flex flex-wrap justify-center w-3/5 m-auto">
             <div className="pb-8">
+              {/* migrate to youtube embed once we start posting on youtube */}
               <FacebookVideoEmbed videoURL="https://www.facebook.com/UWDBC/videos/1088345524633090/" />
             </div>
             <p className="text-white text-center text-sm md:text-xl">
