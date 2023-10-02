@@ -85,36 +85,36 @@ const index = () => {
         </div>
       </section>
 
-      {/* history section */}
+      {/* intro section */}
       <section ref={contentRef} className="py-16 bg-dark text-gold">
-        <div className="container mx-auto px-4">
-          <div>
-            <h3 className="text-sm md:text-xl font-semibold text-center text-white pb-2">
-              HELLO THERE,
-            </h3>
-            <h2 className="text-2xl md:text-6xl font-bold text-center">
-              We Are UWDBC
-            </h2>
+        <div>
+          <h3 className="text-sm md:text-xl font-semibold text-center text-white pb-2">
+            HELLO THERE,
+          </h3>
+          <h2 className="text-2xl md:text-6xl font-bold text-center">
+            We Are UWDBC
+          </h2>
+        </div>
+        <div className="flex justify-center items-center py-8">
+          <hr className="w-3/5 opacity-20" />
+        </div>
+        <div className="flex flex-wrap justify-center w-3/5 m-auto">
+          <div className="pb-8">
+            {/* migrate to youtube embed once we start posting on youtube */}
+            <FacebookVideoEmbed videoURL="https://www.facebook.com/UWDBC/videos/1088345524633090/" />
           </div>
-          <div className="flex justify-center items-center py-8">
-            <hr className="w-3/5 opacity-20" />
-          </div>
-          <div className="flex flex-wrap justify-center w-3/5 m-auto">
-            <div className="pb-8">
-              {/* migrate to youtube embed once we start posting on youtube */}
-              <FacebookVideoEmbed videoURL="https://www.facebook.com/UWDBC/videos/1088345524633090/" />
-            </div>
-            <p className="text-white text-center text-sm md:text-xl">
-              UWDBC is a student-run dragon boat club at the University of
-              Waterloo. In the fall and winter we train together in preparation
-              for racing season in the summer, where we consistently compete as
-              one of the top university programs in Canada. Along the way, we
-              aim to promote and inspire our members to lead a healthy, active
-              lifestyle.
-            </p>
-          </div>
+          <p className="text-white text-center text-sm md:text-xl">
+            UWDBC is a student-run dragon boat club at the University of
+            Waterloo. In the fall and winter we train together in preparation
+            for racing season in the summer, where we consistently compete as
+            one of the top university programs in Canada. Along the way, we aim
+            to promote and inspire our members to lead a healthy, active
+            lifestyle.
+          </p>
         </div>
       </section>
+
+      {/* history section - past regattas */}
     </>
   );
 };

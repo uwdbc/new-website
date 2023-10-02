@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navLinks = [
   { name: "Home", to: "/" },
-  { name: "Join", to: "/join" },
+  { name: "Team", to: "/team" },
   { name: "Gallery", to: "/gallery" },
   { name: "Contact", to: "/contact" },
 ];
@@ -22,7 +22,7 @@ const NavBar = () => {
     const updateVisibility = () => {
       setHidden(window.scrollY > lastScrollY);
       if (window.scrollY > lastScrollY) setOpen(false);
-      setTransparent(window.scrollY == 0);
+      setTransparent(window.scrollY <= 100);
       lastScrollY = scrollY;
     };
 
@@ -36,7 +36,7 @@ const NavBar = () => {
     <nav
       className={
         " text-gold fixed top-0 left-0 w-screen py-4 px-10 flex items-center justify-between transition-all z-10 " +
-        (transparent && !open ? "bg-transparent" : "bg-black")
+        (transparent && !open ? "bg-transparent" : "bg-dark")
       }
       style={{
         transform: hidden ? "translateY(-100%)" : "",
@@ -49,7 +49,7 @@ const NavBar = () => {
         className={
           "gap-6 md:flex top-full " +
           (open
-            ? "flex flex-col absolute top-0 left-0 w-full h-screen bg-black items-center"
+            ? "flex flex-col absolute top-0 left-0 w-full h-screen bg-dark items-center"
             : "hidden")
         }
       >
