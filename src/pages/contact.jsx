@@ -9,13 +9,31 @@ const contact = () => {
         </h1>
       </section>
 
-      <div className="flex">
-
-
-        {/* Contact Us Section */}
-        <div className="flex-1 m-4">
+      <div className="flex bg-gold">
+        {/* Description Section */}
+        <div className="w-1/3 m-4">
             <div className="h-full p-8 rounded shadow-md w-full bg-dark">
               <h1 className="text-2xl font-semibold text-gold mb-4">Contact Us</h1>
+                <p className="text-gold">
+                  Have any questions? Just shoot us a message!
+                  <br />
+                  <br />
+                  <a href="mailto:dragonboat@uwaterloo.ca" class="hover:text-blue-500 hover:underline">
+                    dragonboat@uwaterloo.ca
+                  </a>
+                  <br />
+                  <a href="https://www.instagram.com/wloodragonwarriors/" class="hover:text-blue-500 hover:underline" target="_blank">
+                    https://www.instagram.com/wloodragonwarriors/
+                  </a>
+                  
+                </p>
+            </div>
+        </div>
+
+        {/* Form Section */}
+        <div className="w-2/3 m-4">
+            <div className="h-full p-8 rounded shadow-md w-full bg-dark">
+              {/* <h1 className="text-2xl font-semibold text-gold mb-4">Contact Us</h1> */}
               <form>
                 <div className="mb-4 text-gold">
                   <input type="text" id="name" name="name" placeholder="Name" required className="w-full px-3 py-2 border border-dark border-b-gold hover:border-gold focus:outline-none bg-dark text-white" />
@@ -36,15 +54,7 @@ const contact = () => {
             </div>
         </div>
 
-        {/* Sponsor Us Section */}
-        <div className="flex-1 m-4">
-            <div className="h-full p-8 rounded shadow-md w-full bg-dark">
-              <h1 className="text-2xl font-semibold text-gold mb-4">Sponsor Us</h1>
-              <p className="text-gold">
-                Work In Progress
-              </p>
-            </div>
-        </div>
+        
 
 
       </div>
