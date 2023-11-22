@@ -1060,7 +1060,6 @@ video {
 .image-gallery {
   display: flex;
   width: calc(100% - 10rem);
-  max-width: 70%;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
@@ -1101,8 +1100,8 @@ video {
 }
 
 .photoCardTextName {
-  font-size: 2.1vw;
-  line-height: 2.2vw;
+  font-size: max(1rem, 2.1vw);
+  line-height: max(1.5rem, 2.2vw);
 }
 
 .photoCardTextDescription {
