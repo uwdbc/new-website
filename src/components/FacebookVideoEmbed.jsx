@@ -7,7 +7,7 @@ const FacebookVideoEmbed = ({ videoURL, className }) => {
         className={"border-none overflow-hidden block aspect-video"}
         src={iframeSrc}
         width="100%"
-        height="20000px"
+        height="2000px"
         scrolling="no"
         frameBorder="0"
         allowFullScreen={true}
