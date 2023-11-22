@@ -13,14 +13,7 @@ const PhotoCards = (props) => {
   const importImages = async () => {
     var imageContext;
 
-    switch(props.directory){
-      case "Executive Team": 
-        imageContext = await import.meta.globEager("../assets/exec_team/*");
-        break;
-      case "Trainers/Coaches": 
-        imageContext = await import.meta.globEager("../assets/trainers-coaches/*");
-        break;
-    }
+    imageContext = await import.meta.globEager("../assets/exec_team/*");
 
     const importedImages = Object.keys(imageContext).map((key) => imageContext[key].default);
 
