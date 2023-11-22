@@ -30,11 +30,12 @@ const PhotoCards = (props) => {
           return path[path.length - 1] === person.photo;
         })} alt={person.name}/>
           { (props.directory == "Executive Team") ? 
-          <div className=''>
+          <div>
             <p className='photoCardTextName font-semibold text-white pt-2'>{person.name}</p>
             <p className='photoCardTextDescription text-white'>{person.title}</p> 
           </div> : 
-          <p className='photoCardTextName font-semibold text-white pt-2'>{person.name}</p>}
+          <p className='photoCardTextName font-semibold text-white pt-2'>{person.name}</p>
+          }
       </div>
     ))
       

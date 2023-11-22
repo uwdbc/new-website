@@ -1068,8 +1068,8 @@ video {
 
 .photos {
   width: 25%;
-  margin-left: 1.5vw;
-  margin-right: 1.5vw;
+  margin-left: max(1.5rem, 1.5vw);
+  margin-right: max(1.5rem, 1.5vw);
   margin-bottom: 2rem;
 }
 
