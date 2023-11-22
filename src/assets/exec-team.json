@@ -1,0 +1,78 @@
+{
+    "exec-team": [{
+        "name": "Chelsea Wu",
+        "title": "President",
+        "photo": "chelsea-wu.jpeg"
+    },
+    {
+        "name": "Trevor Ng",
+        "title": "President",
+        "photo": "trevor-ng.jpeg"
+    },
+    {
+        "name": "Evan Howie",
+        "title": "Administrative Director",
+        "photo": "evan-howie.jpeg"
+    },
+    {
+        "name": "Olivia Penn",
+        "title": "Administrative Director",
+        "photo": "olivia-penn.jpeg"
+    },
+    {
+        "name": "Dylan Faelker",
+        "title": "Finance Director",
+        "photo": "dylan-faelker.jpeg"
+    },
+    {
+        "name": "Justin Chhay",
+        "title": "Finance Director",
+        "photo": "justin-chhay.jpeg"
+    },
+    {
+        "name": "Darren Zhao",
+        "title": "Events + Team Wholesomeness",
+        "photo": "darren-zhao.jpeg"
+    },
+    {
+        "name": "Ena Choi",
+        "title": "Graphic Designer/Social Media",
+        "photo": "ena-choi.jpeg"
+    },
+    {
+        "name": "Wayne Wan",
+        "title": "Graphic Designer/Social Media",
+        "photo": "wayne-wan.jpeg"
+    },
+    {
+        "name": "Rebecca Xu",
+        "title": "Graphic Designer/Social Media",
+        "photo": "rebecca-xu.jpeg"
+    }],
+
+    "trainers/coaches":[{
+        "name": "Phil Chung",
+        "photo": "phil-chung.jpeg"
+    },
+    {
+        "name": "Victoria Chang",
+        "photo": "victoria-chang.jpeg"
+    },
+    {
+        "name": "Declan Adams",
+        "photo": "declan-adams.jpeg"
+    },
+    {
+        "name": "Ethan Lo",
+        "photo": "ethan-lo.jpeg"
+    },
+    {
+        "name": "Trevor Ng",
+        "photo": "trevor-ng.jpeg"
+    },
+    {
+        "name": "Raymond Wu",
+        "photo": "raymond-wu.jpeg"
+    }
+]
+}
