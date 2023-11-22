@@ -8,6 +8,7 @@ import IconButtonLink from "../components/IconButtonLink";
 import { faDiscord, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinktree } from "../setup";
 import FacebookVideoEmbed from "../components/FacebookVideoEmbed";
+import AboutImage from "../assets/about-pic.jpg";
 
 const images = [hero];
 const socials = [
@@ -86,8 +87,8 @@ const index = () => {
       </section>
 
       {/* intro section */}
-      <section ref={contentRef} className="py-16 bg-dark text-gold">
-        <div>
+      <section ref={contentRef} className="bg-dark text-gold">
+        <div className="py-8 md:py-16">
           <h3 className="text-sm md:text-xl font-semibold text-center text-white pb-2">
             HELLO THERE,
           </h3>
@@ -95,11 +96,8 @@ const index = () => {
             We Are UWDBC
           </h2>
         </div>
-        <div className="flex justify-center items-center py-8">
-          <hr className="w-3/5 opacity-20" />
-        </div>
-        <div className="flex flex-wrap justify-center w-3/5 m-auto">
-          <div className="pb-8">
+        <div className="flex flex-wrap justify-center px-4 md:px-48">
+          <div className="w-4/5 max-w-[720px] pb-8">
             {/* migrate to youtube embed once we start posting on youtube */}
             <FacebookVideoEmbed videoURL="https://www.facebook.com/UWDBC/videos/1088345524633090/" />
           </div>
@@ -111,6 +109,47 @@ const index = () => {
             to promote and inspire our members to lead a healthy, active
             lifestyle.
           </p>
+        </div>
+      </section>
+
+      {/* about dragon boat */}
+
+      <section className="bg-dark text-white">
+        <h2 className="py-8 md:py-16 text-2xl md:text-6xl font-bold text-center text-gold">
+          About UWDBC
+        </h2>
+        <div className="px-4 md:px-48">
+          <div className="lg:grid lg:grid-cols-1-to-2">
+            <div className="flex flex-col gap-6 pr-4 justify-center">
+              <div>
+                <h3 className="text-2xl md:text-4xl text-white font-semibold py-3">
+                  What is Dragon Boat?
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Itaque sunt quaerat, nesciunt consectetur assumenda numquam
+                  praesentium doloribus dolorem molestias illo ut cum incidunt
+                  alias, repudiandae dignissimos. Commodi itaque laboriosam
+                  dolorum.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-2xl md:text-4xl text-white font-semibold py-3">
+                  Our Club's Journey
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente non sunt impedit minus voluptate dolor. Porro facere,
+                  aliquid quia maxime perferendis ab magnam praesentium soluta
+                  iure unde id, iste inventore.
+                </p>
+              </div>
+            </div>
+            <div
+              className="hidden lg:block w-full h-full min-h-[600px] bg-cover bg-center"
+              style={{ backgroundImage: `url(${AboutImage})` }}
+            ></div>
+          </div>
         </div>
       </section>
 
