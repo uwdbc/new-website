@@ -1,43 +1,32 @@
-import React, { useState, useEffect } from "react";
-import execTeam from "../assets/exec-team.json";
+import React, { useState, useRef } from "react";
+import execTeam from "../team/exec-team.json";
+import LoadingModal from "./LoadingModal";
 
-const PhotoCards = (props) => {
-  const [images, setImages] = useState([]);
+const PhotoCards = ({ directory }) => {
+  const imagesLoaded = useRef(0);
+  const [loading, setLoading] = useState(true);
+  const num_images = execTeam[directory].length;
 
-  useEffect(() => {
-    importImages().then((importedImages) => {
-      setImages(importedImages);
-    });
-  }, []);
-
-  const importImages = async () => {
-    var imageContext;
-
-    imageContext = await import.meta.globEager("../assets/exec_team/*");
-
-    const importedImages = Object.keys(imageContext).map(
-      (key) => imageContext[key].default
-    );
-
-    return importedImages;
-  };
+  function onImageLoad(e) {
+    imagesLoaded.current++;
+    if (imagesLoaded.current >= num_images) {
+      setLoading(false);
+    }
+  }
 
   return (
     <div className="flex px-4 md:px-32 xl:px-[20%] flex-wrap justify-center gap-8">
-      {execTeam[
-        props.directory == "Executive Team" ? "exec-team" : "trainers/coaches"
-      ].map((person) => (
+      {loading && <LoadingModal />}
+      {execTeam[directory].map((person) => (
         <div key={person.name} className="max-w-[320px]">
           <img
             className="object-cover w-full"
             key={person.name}
-            src={images.find((image) => {
-              var path = image.split("/");
-              return path[path.length - 1] === person.photo;
-            })}
+            src={"exec_team/" + person.photo}
             alt={person.name}
+            onLoad={onImageLoad}
           />
-          {props.directory == "Executive Team" ? (
+          {directory == "exec-team" ? (
             <div>
               <p className="break-words font-semibold text-white pt-2">
                 {person.name}

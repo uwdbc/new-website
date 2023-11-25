@@ -1,5 +1,5 @@
 import React from "react";
-import rosteredMembers from "../assets/rostered-members.json";
+import rosteredMembers from "../team/rostered-members.json";
 
 const RosteredMembers = () => {
   return (
