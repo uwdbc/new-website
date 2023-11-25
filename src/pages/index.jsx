@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import hero from "../assets/hero-bg.png";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoadingModal from "../components/LoadingModal";
@@ -7,10 +6,15 @@ import ButtonLink from "../components/ButtonLink";
 import IconButtonLink from "../components/IconButtonLink";
 import { faDiscord, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinktree } from "../setup";
+// change to youtube embed later
 import FacebookVideoEmbed from "../components/FacebookVideoEmbed";
-import AboutImage from "../assets/about-pic.jpg";
 
-const images = [hero];
+const images = {
+  hero: "https://lh3.googleusercontent.com/u/1/drive-viewer/AK7aPaCThnF9nt4OKo3brPDn49UefFyxMZ-nOpQyURLW5JYOMyDJz0RlSho-jIHMIoruDlbpkZotd6Rse_HrrJhmk4MGg6HlDg=w1920-h963",
+  about:
+    "https://lh3.googleusercontent.com/u/1/drive-viewer/AK7aPaDJ6i0TGFPw-1asxniPxrLaUR-eak9n6aLemDDlCpbdZKJSkD4EGfKW8TSfP7Q03BbRdRug2NTAyyVgL9UMRxjmeGW3og=w1920-h963",
+};
+
 const socials = [
   { icon: faDiscord, href: "https://discord.gg/aQzCK9Gfez" },
   { icon: faLinktree, href: "https://linktr.ee/uwdbc" },
@@ -24,7 +28,7 @@ const index = () => {
 
   function onImageLoad(e) {
     imagesLoaded.current++;
-    if (imagesLoaded.current >= images.length) {
+    if (imagesLoaded.current >= Object.keys(images).length) {
       setLoading(false);
     }
   }
@@ -42,11 +46,12 @@ const index = () => {
       {/* hero section */}
       <section className="text-gold">
         {loading && <LoadingModal />}
-        <img src={hero} className="hidden" onLoad={onImageLoad} />
+        <img src={images.hero} className="hidden" onLoad={onImageLoad} />
+        <img src={images.about} className="hidden" onLoad={onImageLoad} />
 
         <div
           style={{
-            backgroundImage: `url(${hero})`,
+            backgroundImage: `url(${images.hero})`,
           }}
           className="h-screen bg-center bg-cover bg-fixed flex items-center"
           onLoad={onImageLoad}
@@ -147,7 +152,7 @@ const index = () => {
             </div>
             <div
               className="hidden lg:block w-full h-full min-h-[600px] bg-cover bg-center"
-              style={{ backgroundImage: `url(${AboutImage})` }}
+              style={{ backgroundImage: `url(${images.about})` }}
             ></div>
           </div>
         </div>
