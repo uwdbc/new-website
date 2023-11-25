@@ -13,7 +13,7 @@ const join = () => {
           Meet the dedicated individuals who steer the club and ensure smooth
           paddling for our dragon boat racing community.
         </p>
-        <PhotoCards directory="Executive Team" />
+        <PhotoCards directory="exec-team" />
         <h1 className="text-3xl md:text-4xl font-bold text-center text-gold pt-4 pb-4">
           Coaches/Trainers
         </h1>
@@ -21,7 +21,7 @@ const join = () => {
           The people who guide the team to success with expert training
           techniques and personalized coaching.
         </p>
-        <PhotoCards directory="Trainers/Coaches" />
+        <PhotoCards directory="trainers/coaches" />
         <h1 className="text-3xl md:text-4xl font-bold text-center text-gold pt-4 pb-4">
           Our Team
         </h1>
