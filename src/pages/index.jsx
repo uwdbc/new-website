@@ -115,7 +115,7 @@ const index = () => {
       {/* about dragon boat */}
 
       <section className="bg-dark text-white">
-        <h2 className="py-8 md:py-16 text-2xl md:text-6xl font-bold text-center text-gold">
+        <h2 className="py-8 md:py-16 text-3xl md:text-6xl font-bold text-center text-gold">
           About UWDBC
         </h2>
         <div className="px-4 md:px-48">
